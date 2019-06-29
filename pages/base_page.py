@@ -1,4 +1,3 @@
-from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver as RemoteWebDriver
 from selenium.common.exceptions import NoSuchElementException
 
@@ -11,9 +10,6 @@ class BasePage(object):
 
     def open(self):
         self.browser.get(self.url)
-
-    def should_be_login_link(self):
-        assert self.browser.find_element(By.CSS_SELECTOR, '#login_link'), "Login link is not presented"
 
     def is_element_present(self, how, what):
         try:

@@ -7,3 +7,5 @@ def test_add_to_chart(browser):
     page.open()
     page.add_to_chart()
     page.solve_quiz_and_get_code()
+    page.verify_success_msg(page.get_item_name())
+    page.verify_cart_cost(page.get_item_price())

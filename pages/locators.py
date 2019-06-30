@@ -12,3 +12,7 @@ class LoginPageLocators(object):
 
 class ItemPageLocators(object):
     ADD_TO_CHART = (By.CSS_SELECTOR, 'button.btn-add-to-basket')
+    SUCCESS_MSG = (By.CSS_SELECTOR, 'div .alert:nth-child(1) > div')
+    CART_COAST = (By.CSS_SELECTOR, 'div .alert:nth-child(3) > div')
+    ITEM_NAME = (By.CSS_SELECTOR, 'div .col-sm-6.product_main > h1')
+    ITEM_PRICE = (By.CSS_SELECTOR, 'div .col-sm-6.product_main > p.price_color')

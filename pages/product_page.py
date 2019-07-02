@@ -41,4 +41,3 @@ class ProductPage(BasePage):
             assert self.is_disappeared(*locator, timeout=timeout), 'Element isn`t disappeared, but should be'
         else:
             assert self.is_disappeared(*locator), 'Element isn`t disappeared, but should be'
-

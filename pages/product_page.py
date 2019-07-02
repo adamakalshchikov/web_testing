@@ -36,7 +36,7 @@ class ProductPage(BasePage):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but not should be"
 
-    def should_element_disappeared(self, locator, timeout=None):
+    def should_element_disappeared(self, *locator, timeout=None):
         if timeout:
             assert self.is_disappeared(*locator, timeout=timeout), 'Element isn`t disappeared, but should be'
         else:

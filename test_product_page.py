@@ -17,6 +17,12 @@ def test_guest_can_add_product_to_cart(browser, link):
     page.open()
     page.add_to_chart()
     page.solve_quiz_and_get_code()
-    # pdb.set_trace()
     page.verify_success_msg(page.get_item_name())
     page.verify_cart_cost(page.get_item_price())
+
+
+def test_guest_cant_see_success_message(browser, link):
+    page = ProductPage(browser, link)
+    page.open()
+    page.should_not_be_success_message()
+

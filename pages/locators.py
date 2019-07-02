@@ -11,7 +11,7 @@ class LoginPageLocators(object):
     REGISTER_FORM = (By.ID, 'register_form')
 
 
-class ProductPageLocators(object):
+class ProductPageLocators(BasePageLocators):
     ADD_TO_CHART = (By.CSS_SELECTOR, 'button.btn-add-to-basket')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div .alert:nth-child(1) > div')
     CART_COAST = (By.CSS_SELECTOR, 'div .alert:nth-child(3) > div')

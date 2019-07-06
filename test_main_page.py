@@ -2,17 +2,8 @@ from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.cart_page import CartPage
 import pytest
-import pdb
 
 
-@pytest.mark.skip(reason="not implemented")
-def go_to_login_page(browser):
-    page = MainPage(browser, 'hht')
-    page.open()
-    pass
-
-
-@pytest.mark.skip
 def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/"
     page = MainPage(browser, link)

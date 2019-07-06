@@ -13,13 +13,12 @@ class ProductPage(BasePage):
 
     def verify_success_msg(self, text_expected):
         msg = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE)
-        # pdb.set_trace()
-        assert msg.text == f"{text_expected} был добавлен в вашу корзину.", "Message don`t match with expected"
+        assert msg.text == f"{text_expected} has been added to your basket.", "Message don`t match with expected"
         # assert msg.text.startswith(text_expected), "Message don`t match with expected"
 
     def verify_cart_cost(self, cost_expected):
         elem = self.browser.find_element(*ProductPageLocators.CART_COAST)
-        cost = elem.text.split(' ')[4]
+        cost = elem.text.split('\n')[0].split()[-1]
         assert cost == cost_expected, "Cost of item and cost of cart are difference"
 
     def get_item_price(self):

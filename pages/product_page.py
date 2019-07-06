@@ -38,9 +38,6 @@ class ProductPage(BasePage):
         else:
             assert self.is_disappeared(*locator), 'Element isn`t disappeared, but should be'
 
-    def should_be_login_link(self):
-        assert self.is_element_present(*ProductPageLocators.LOGIN_LINK), "No login link presented"
-
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but not should be"

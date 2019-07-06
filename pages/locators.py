@@ -6,11 +6,16 @@ class BasePageLocators(object):
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     VIEW_BASKET = (By.CSS_SELECTOR, "span > .btn:not(.dropdown-toggle)")
     NAV_PANEL = (By.CSS_SELECTOR, 'ul.breadcrumb')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators(BasePageLocators):
     LOGIN_FORM = (By.ID, 'login_form')
     REGISTER_FORM = (By.ID, 'register_form')
+    EMAIL_INPUT = (By.ID, 'id_registration-email')
+    PASSWORD_INPUT_1 = (By.ID, "id_registration-password1")
+    PASSWORD_INPUT_2 = (By.ID, "id_registration-password2")
+    REGISTER_BUTTON = (By.CSS_SELECTOR, 'button[name="registration_submit"]')
 
 
 class ProductPageLocators(BasePageLocators):
